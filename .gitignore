@@ -1,0 +1,6 @@
+bin/
+obj/
+node_modules/
+.vs/
+appsettings.Development.json
+appsettings.Production.json

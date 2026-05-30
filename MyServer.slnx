@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Éléments de solution/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="PilotBackEnd/PilotBackEnd.csproj" />
+  <Project Path="PilotMetricsMicroservice/PilotMetricsMicroservice.csproj" />
+</Solution>
