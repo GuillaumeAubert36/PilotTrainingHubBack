@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/metrics")]
@@ -14,6 +14,7 @@ public class MetricsController : ControllerBase
         _logger = logger;
     }
 
+    [Authorize]
     [HttpGet]
     public async Task<IActionResult> Get()
     {       
