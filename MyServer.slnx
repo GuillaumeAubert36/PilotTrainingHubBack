@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Éléments de solution/">
     <File Path=".gitignore" />
+    <File Path="dbscript.sql" />
   </Folder>
   <Project Path="PilotBackEnd/PilotBackEnd.csproj" />
   <Project Path="PilotMetricsMicroservice/PilotMetricsMicroservice.csproj" />

@@ -14,7 +14,7 @@ public class MetricsController : ControllerBase
         _logger = logger;
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     [HttpGet]
     public async Task<IActionResult> Get()
     {       

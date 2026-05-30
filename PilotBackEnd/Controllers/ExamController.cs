@@ -15,7 +15,7 @@ public class PilotExamController : ControllerBase
         _logger = logger;
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin,User")]
     [HttpPost("select_pilot_exam")]
     public async Task<IActionResult> SelectPilotExam([FromBody] IdUserRequest request)
     {
@@ -52,7 +52,7 @@ public class PilotExamController : ControllerBase
         }
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin,User")]
     [HttpPost("select_one_exam")]
     public async Task<IActionResult> SelectOneExam([FromBody] IdExamRequest request)
     {
@@ -87,7 +87,7 @@ public class PilotExamController : ControllerBase
         }
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin,User")]
     [HttpPost("insert_pilot_exam")]
     public async Task<IActionResult> Insert([FromBody] InsertPilotExamRequest request)
     {
@@ -126,7 +126,7 @@ public class PilotExamController : ControllerBase
         }
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin,User")]
     [HttpPost("delete_pilot_exam")]
     public async Task<IActionResult> Delete([FromBody] IdExamRequest request)
     {
@@ -170,7 +170,7 @@ public class PilotExamController : ControllerBase
         }
     }
 
-    [Authorize]
+    [Authorize(Roles = "Admin,User")]
     [HttpPost("clear_all_exams")]
     public async Task<IActionResult> ClearAll([FromBody] IdUserRequest request)
     {
