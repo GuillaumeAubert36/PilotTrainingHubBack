@@ -34,9 +34,12 @@ public class AuthController : ControllerBase
             });
         }
 
+        var token = _service.GenerateToken(user);
+
         return Ok(new
         {
             success = true,
+            token = token,
             firstname = user.firstname,
             email = user.email,
             iduser = user.iduser,
