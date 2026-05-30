@@ -37,7 +37,7 @@ public class PilotExamController : ControllerBase
 
             _logger.LogInformation("Exams retrieved: {Exams}", examList.Count());
 
-            return Ok(new { success = true, data = exams });
+            return Ok(new { success = true, exams = exams });
         }
         catch (Exception ex)
         {
