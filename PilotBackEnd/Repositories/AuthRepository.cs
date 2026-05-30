@@ -21,7 +21,7 @@ public class AuthRepository : IAuthRepository
         await conn.OpenAsync();
 
         var cmd = new NpgsqlCommand(@"
-            SELECT iduser, username, firstname, email
+            SELECT iduser, username, firstname, email, role
             FROM pilot_user
             WHERE LOWER(TRIM(username)) = LOWER(TRIM(@username))
             AND TRIM(password) = TRIM(@password)
@@ -40,7 +40,8 @@ public class AuthRepository : IAuthRepository
                 iduser = reader["iduser"],
                 username = reader["username"],
                 firstname = reader["firstname"],
-                email = reader["email"]
+                email = reader["email"],
+                role = reader["role"]
             };
         }
 
