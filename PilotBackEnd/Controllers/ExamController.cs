@@ -71,7 +71,7 @@ public class PilotExamController : ControllerBase
 
             _logger.LogInformation("Exam {ExamId} retrieved", request.IdExam);
 
-            return Ok(new { success = true, data = exam });
+            return Ok(new { success = true, exam = exam });
         }
         catch (Exception ex)
         {
